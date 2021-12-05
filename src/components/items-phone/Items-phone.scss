@@ -1,0 +1,174 @@
+.phone_item {
+  height: 550px;
+  border: 2px solid rgb(97, 97, 97, 0.2);
+  text-align: start;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: 0.5;
+  .img_phone_information {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  .img_phone_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    h3 {
+      display: inline-block;
+    }
+    p {
+      display: inline;
+      font-size: 20px;
+    }
+  }
+  span {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .img_phone {
+    position: relative;
+    height: 350px;
+    padding: 20px 0;
+    border-bottom: 2px solid rgb(97, 97, 97, 0.2);
+    transition: 0.5s;
+    z-index: 5;
+    .lazy-load-image-loaded {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.phone_item_btn {
+  width: max-content;
+  margin: 0 auto;
+  button {
+    cursor: pointer;
+    border-radius: 3px 0 0 3px;
+    border: 1px solid rgb(151, 151, 151, 0.5);
+    padding: 10px 20px;
+  }
+  button:nth-child(2) {
+    border-radius: 0 3px 3px 0;
+  }
+  button:hover {
+    color: white;
+    background-color: rgb(33, 102, 206);
+  }
+}
+
+#phone__add_img {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 50px;
+  height: 50px;
+  display: none;
+  opacity: 0.3;
+  z-index: 100;
+  transition: 0.5s;
+}
+#phone__add_img:hover {
+  opacity: 1;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+@media (max-width: 1000px) {
+  .phone_item {
+    height: 450px;
+
+    .img_phone_information {
+      .img_phone_text {
+        margin: 0;
+        h3 {
+          font-size: 17px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      span {
+        margin: 10px;
+        font-size: 16px;
+      }
+      button {
+        font-size: 10px;
+        padding: 5px;
+      }
+    }
+    .img_phone {
+      height: 270px;
+    }
+  }
+  #phone__add_img {
+    top: 47%;
+    right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .main_section_phone {
+    .phone_item {
+      height: 360px;
+      .img_phone_information {
+        padding: 10px;
+        .img_phone_text {
+          flex-wrap: wrap;
+          height: 30px;
+          h3 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+        span {
+          font-size: 14px;
+          margin: 10px 0;
+        }
+      }
+      .img_phone {
+        height: 205px;
+      }
+    }
+  }
+  #phone__add_img {
+    top: 45%;
+    right: 2px;
+    width: 40px;
+    height: 40px;
+  }
+}

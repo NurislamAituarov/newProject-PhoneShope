@@ -1,0 +1,31 @@
+.App {
+  position: relative;
+  font-family: 'Zilla Slab', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  // background: rgb(2, 0, 36);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(2, 0, 36, 1) 0%,
+  //   rgba(9, 9, 121, 1) 0%,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(55, 110, 201, 1) 100%,
+  //   rgba(203, 153, 0, 1) 100%,
+  //   rgba(171, 171, 181, 1) 100%,
+  //   rgba(255, 255, 255, 1) 100%
+  // );
+  font-size: 18px;
+  text-align: center;
+  padding: 2% 4% 6% 4%;
+  max-width: 1600px;
+  min-height: 600px;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .App {
+    min-height: 530px;
+  }
+}

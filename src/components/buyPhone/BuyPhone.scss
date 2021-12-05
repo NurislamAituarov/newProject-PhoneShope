@@ -1,0 +1,238 @@
+.buy_wrapper {
+  position: relative;
+  padding: 20px;
+  color: rgb(3, 45, 161);
+}
+
+#link {
+  position: absolute;
+  top: -26px;
+  left: 20px;
+  transition: 0.5s;
+}
+#link:hover {
+  transform: translateX(-10px);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  border-bottom: 2px solid rgba(209, 209, 209, 0.5);
+  margin-bottom: 20px;
+  transition: 0.5s;
+  h2 {
+    color: red;
+  }
+  #item_price {
+    display: flex;
+    align-items: center;
+    color: rgb(3, 45, 161);
+    font-weight: bold;
+  }
+  .item__wrapper_general {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+  }
+  .item__general {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
+    #item__img {
+      width: 20px;
+      transition: 0.5s;
+      opacity: 0.5;
+    }
+    #item__img:hover {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    strong {
+      margin-left: 10px;
+      font-size: 50px;
+      margin-right: 10px;
+    }
+    img {
+      cursor: pointer;
+    }
+    #img {
+      width: 50px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.item:hover {
+  border-bottom: 2px solid rgba(77, 143, 194, 0.5);
+}
+
+.buy_wrapper-notItem {
+  width: max-content;
+  position: absolute;
+  top: 50px;
+  left: 40%;
+  border-radius: 10px;
+  padding: 20px;
+
+  h5 {
+    color: black;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  img {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+}
+
+#item__buy-remove {
+  display: flex;
+  align-items: center;
+  span {
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    color: red;
+    padding: 9px 20px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid rgb(194, 194, 194);
+    z-index: 5;
+    overflow: hidden;
+  }
+  span::before {
+    position: absolute;
+    content: '';
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.3s;
+    z-index: -1;
+  }
+  span:hover::before {
+    left: 0;
+  }
+  span:hover {
+    color: white;
+  }
+  div {
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 0 5px 5px 0;
+  }
+  div:hover {
+    border: 1px solid rgb(255, 0, 0);
+  }
+}
+
+.show-inform {
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+// Transition///////////
+.my_item-enter {
+  opacity: 0;
+}
+.my_item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.my_item-exit {
+  opacity: 1;
+}
+.my_item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+// ////////
+.my_item-not-enter {
+  opacity: 0;
+}
+.my_item-not-enter-active {
+  opacity: 1;
+  transition: opacity 4000ms ease-in;
+}
+.my_item-not-exit {
+  opacity: 1;
+}
+.my_item-not-exit-active {
+  opacity: 0;
+  transition: opacity 4000ms ease-in;
+}
+
+// media///////////
+
+@media (max-width: 768px) {
+  #link {
+    left: 15px;
+    top: 0;
+  }
+  .item {
+    display: block;
+    padding: 14px 24px;
+    margin-top: 50px;
+    .item__wrapper_general {
+      .item__general {
+        strong {
+          font-size: 30px;
+        }
+        justify-content: center;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(131, 131, 131, 0.3);
+        #img {
+          width: 40px;
+        }
+        #item__img {
+          width: 15px;
+        }
+      }
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      #item_price {
+        margin-top: 5px;
+        margin-left: 40%;
+      }
+    }
+  }
+  .buy_wrapper-notItem {
+    left: 11%;
+    top: 255%;
+    img {
+      width: 100px;
+    }
+  }
+  #item__buy-remove {
+    margin-left: 72px;
+    margin-top: 5px;
+    span {
+      padding: 7px 10px;
+      font-size: 15px;
+    }
+    div {
+      padding: 4px;
+    }
+  }
+  .show-inform {
+    position: relative;
+  }
+}

@@ -1,0 +1,39 @@
+.wrapper_phone_info {
+  padding: 50px;
+  text-align: start;
+  height: max-content;
+  max-width: 400px;
+  border-radius: 10px;
+  // border: 1px solid rgb(192, 192, 192);
+  position: relative;
+  box-shadow: 2px 2px 5px 1px rgb(216, 216, 216);
+  h2 {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  p {
+    margin-bottom: 15px;
+    // width: 200px;
+  }
+}
+.back {
+  position: absolute;
+  bottom: 3%;
+  right: 10%;
+  a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 4px;
+    background-color: rgb(182, 182, 182);
+    transition: 0.5s;
+  }
+  a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+}
