@@ -2,11 +2,11 @@
   "files": {
     "static/js/0.7412bb41.chunk.js": "/newProject-PhoneShope/static/js/0.7412bb41.chunk.js",
     "static/js/0.7412bb41.chunk.js.map": "/newProject-PhoneShope/static/js/0.7412bb41.chunk.js.map",
-    "main.css": "/newProject-PhoneShope/static/css/main.c1d0292b.chunk.css",
+    "main.css": "/newProject-PhoneShope/static/css/main.f5272ee1.chunk.css",
     "main.js": "/newProject-PhoneShope/static/js/main.7d091463.chunk.js",
     "main.js.map": "/newProject-PhoneShope/static/js/main.7d091463.chunk.js.map",
-    "runtime-main.js": "/newProject-PhoneShope/static/js/runtime-main.b19d6bbd.js",
-    "runtime-main.js.map": "/newProject-PhoneShope/static/js/runtime-main.b19d6bbd.js.map",
+    "runtime-main.js": "/newProject-PhoneShope/static/js/runtime-main.2e1d458e.js",
+    "runtime-main.js.map": "/newProject-PhoneShope/static/js/runtime-main.2e1d458e.js.map",
     "static/js/3.f2d7ae02.chunk.js": "/newProject-PhoneShope/static/js/3.f2d7ae02.chunk.js",
     "static/js/3.f2d7ae02.chunk.js.map": "/newProject-PhoneShope/static/js/3.f2d7ae02.chunk.js.map",
     "static/css/4.6341ba19.chunk.css": "/newProject-PhoneShope/static/css/4.6341ba19.chunk.css",
@@ -18,7 +18,7 @@
     "static/css/6.8095601a.chunk.css": "/newProject-PhoneShope/static/css/6.8095601a.chunk.css",
     "static/js/6.dfe21c23.chunk.js": "/newProject-PhoneShope/static/js/6.dfe21c23.chunk.js",
     "static/js/6.dfe21c23.chunk.js.map": "/newProject-PhoneShope/static/js/6.dfe21c23.chunk.js.map",
-    "static/css/7.2d47f49f.chunk.css": "/newProject-PhoneShope/static/css/7.2d47f49f.chunk.css",
+    "static/css/7.3965e3dc.chunk.css": "/newProject-PhoneShope/static/css/7.3965e3dc.chunk.css",
     "static/js/7.880fd75e.chunk.js": "/newProject-PhoneShope/static/js/7.880fd75e.chunk.js",
     "static/js/7.880fd75e.chunk.js.map": "/newProject-PhoneShope/static/js/7.880fd75e.chunk.js.map",
     "static/css/8.7d2c650f.chunk.css": "/newProject-PhoneShope/static/css/8.7d2c650f.chunk.css",
@@ -28,9 +28,9 @@
     "static/css/4.6341ba19.chunk.css.map": "/newProject-PhoneShope/static/css/4.6341ba19.chunk.css.map",
     "static/css/5.030cb857.chunk.css.map": "/newProject-PhoneShope/static/css/5.030cb857.chunk.css.map",
     "static/css/6.8095601a.chunk.css.map": "/newProject-PhoneShope/static/css/6.8095601a.chunk.css.map",
-    "static/css/7.2d47f49f.chunk.css.map": "/newProject-PhoneShope/static/css/7.2d47f49f.chunk.css.map",
+    "static/css/7.3965e3dc.chunk.css.map": "/newProject-PhoneShope/static/css/7.3965e3dc.chunk.css.map",
     "static/css/8.7d2c650f.chunk.css.map": "/newProject-PhoneShope/static/css/8.7d2c650f.chunk.css.map",
-    "static/css/main.c1d0292b.chunk.css.map": "/newProject-PhoneShope/static/css/main.c1d0292b.chunk.css.map",
+    "static/css/main.f5272ee1.chunk.css.map": "/newProject-PhoneShope/static/css/main.f5272ee1.chunk.css.map",
     "static/js/3.f2d7ae02.chunk.js.LICENSE.txt": "/newProject-PhoneShope/static/js/3.f2d7ae02.chunk.js.LICENSE.txt",
     "static/media/addItem.f1a3b878.png": "/newProject-PhoneShope/static/media/addItem.f1a3b878.png",
     "static/media/logo.8f0be3fb.png": "/newProject-PhoneShope/static/media/logo.8f0be3fb.png",
@@ -41,9 +41,9 @@
     "static/media/smile.f85bcfb1.png": "/newProject-PhoneShope/static/media/smile.f85bcfb1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b19d6bbd.js",
+    "static/js/runtime-main.2e1d458e.js",
     "static/js/3.f2d7ae02.chunk.js",
-    "static/css/main.c1d0292b.chunk.css",
+    "static/css/main.f5272ee1.chunk.css",
     "static/js/main.7d091463.chunk.js"
   ]
 }
