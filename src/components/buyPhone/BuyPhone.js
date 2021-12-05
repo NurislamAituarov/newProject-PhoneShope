@@ -35,7 +35,7 @@ const BuyPhone = () => {
             );
           })
         )}
-        <NavLink id="link" to="/">
+        <NavLink id="link" to="/newProject-PhoneShope">
           <img width="45" height="40" src={left} alt="left" />
         </NavLink>
       </TransitionGroup>

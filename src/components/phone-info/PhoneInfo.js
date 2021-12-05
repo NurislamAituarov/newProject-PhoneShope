@@ -20,7 +20,7 @@ const PhoneInfo = () => {
       <p>Size: {phoneItem.size}</p>
       <p>Weight: {phoneItem.weight}</p>
       <div className="back">
-        <NavLink to="/">Back</NavLink>
+        <NavLink to="/newProject-PhoneShope">Back</NavLink>
       </div>
     </div>
   );

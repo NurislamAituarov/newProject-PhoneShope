@@ -18,7 +18,7 @@ function App() {
 
         <ErrorBoundary>
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/newProject-PhoneShope" element={<Main />} />
             <Route path="/BuyPhone" element={<BuyPhone />} />
             <Route path="/PhoneInfo/:phoneId" element={<PhoneInfo />} />
           </Routes>
