@@ -128,6 +128,12 @@ main {
   .main_section_phone {
     grid-template-columns: 1fr 1fr;
   }
+  .btn_more {
+    bottom: -54px;
+    right: 4px;
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 }
 @media (max-width: 700px) {
   main {

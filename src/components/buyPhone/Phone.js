@@ -31,7 +31,6 @@ const Phone = ({ item, itemFirst, dispatch }) => {
     object.name = name;
     object.price = price * item.length;
     const div = document.createElement('div');
-    // div.innerHTML = 'Ваш запрос обрабатывается';
     div.classList.add('show-inform');
     itemRef.current.appendChild(div);
     setSpinnerTrigger(true);
@@ -46,6 +45,7 @@ const Phone = ({ item, itemFirst, dispatch }) => {
       .then((data) => {
         div.innerHTML = 'Ваш запрос успешно завершился';
         setSpinnerTrigger(false);
+        console.log(data);
       })
       .catch((err) => {
         alert('Error: ');
@@ -55,7 +55,7 @@ const Phone = ({ item, itemFirst, dispatch }) => {
       });
   }
   return (
-    <div tabindex="0" ref={itemRef} key={itemFirst.id} className="item">
+    <div tabIndex="0" ref={itemRef} key={itemFirst.id} className="item">
       <div className="item__wrapper_general">
         <div
           className="item__general"

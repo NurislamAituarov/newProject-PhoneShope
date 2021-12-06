@@ -1,21 +1,24 @@
 import './Items-phone.scss';
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useRef } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-import { buyNow } from '../../action/action';
-import addItem from '../../image/addItem.png';
+import { buyNow, removePhone } from '../../action/action';
+import addItem from '../../image/addBlack.png';
+import deleted from '../../image/delete.png';
 
-const ItemsPhone = ({ item }) => {
+const ItemsPhone = memo(({ item }) => {
   // console.log('render');
+  const buyPhoneItem = useSelector((state) => state.phoneChange.buyItem);
   const description = item.description.split(' ');
   const newDescription = description.splice(0, 7).join(' ');
   const imgRef = useRef();
   const addPhone = useRef();
+  const deletedRef = useRef();
   const dispatch = useDispatch();
   const [triggerAddPhoneButton, setTriggerAddPhoneButton] = useState(false);
 
@@ -29,10 +32,12 @@ const ItemsPhone = ({ item }) => {
   function onMouseEnter() {
     imgRef.current.style.opacity = '0.3';
     addPhone.current.style.display = 'block';
+    deletedRef.current.style.display = 'block';
   }
   function onMouseOut() {
     imgRef.current.style.opacity = '1';
     addPhone.current.style.display = 'none';
+    deletedRef.current.style.display = 'none';
   }
   return (
     <>
@@ -40,7 +45,10 @@ const ItemsPhone = ({ item }) => {
         onMouseOver={() => onMouseEnter()}
         onMouseOut={() => onMouseOut()}
         className="phone_item">
-        <div ref={imgRef} className="img_phone">
+        <div
+          ref={imgRef}
+          className="img_phone"
+          style={triggerAddPhoneButton ? { transform: 'scale(1.1)' } : { transform: 'scale(1)' }}>
           <LazyLoadImage effect="blur" src={item.image} alt="img-phone" />
         </div>
         <div className="img_phone_information">
@@ -62,19 +70,28 @@ const ItemsPhone = ({ item }) => {
           <CSSTransition timeout={500} classNames="item">
             <img
               style={
-                triggerAddPhoneButton ? { transform: 'scale(1.1)' } : { transform: 'scale(1)' }
+                triggerAddPhoneButton ? { transform: 'scale(0.9)' } : { transform: 'scale(1)' }
               }
-              className="fade"
+              className="fade phone__add_img"
               onClick={() => buyPhone(item)}
               ref={addPhone}
-              id="phone__add_img"
               src={addItem}
               alt="add"
             />
           </CSSTransition>
         </TransitionGroup>
+        <img
+          src={deleted}
+          alt="deleted"
+          style={triggerAddPhoneButton ? { transform: 'scale(0.9)' } : { transform: 'scale(1)' }}
+          className="fade phone__add_img deleted"
+          onClick={() => {
+            Object.values(buyPhoneItem)[0] && dispatch(removePhone(item));
+          }}
+          ref={deletedRef}
+        />
       </div>
     </>
   );
-};
+});
 export default ItemsPhone;

@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import './App.scss';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+import SpinnerBig from '../../spinner/SpinnerBig';
 
 const Header = lazy(() => import('../header/Header'));
 const Main = lazy(() => import('../main/Main'));
@@ -11,7 +12,7 @@ const PhoneInfo = lazy(() => import('../phone-info/PhoneInfo'));
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<SpinnerBig />}>
         <ErrorBoundary>
           <Header />
         </ErrorBoundary>

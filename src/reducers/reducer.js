@@ -4,6 +4,7 @@ const initialState = {
   items: phoneItems,
   itemsFilter: phoneItems,
   valueSearch: '',
+  popUp: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -20,7 +21,11 @@ const reducer = (state = initialState, action) => {
           ? state.items.filter((item) => item.categoryId === action.payload)
           : state.items,
       };
-
+    case 'POP_UP':
+      return {
+        ...state,
+        popUp: action.payload,
+      };
     default:
       return state;
   }

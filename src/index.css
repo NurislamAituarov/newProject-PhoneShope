@@ -3,6 +3,19 @@
   margin: 0;
   padding: 0;
 }
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+input {
+  border: none;
+  outline: none;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 body {
   background-color: rgb(54, 54, 54);
 }
