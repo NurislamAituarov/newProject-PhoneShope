@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { memo, useRef, useState } from 'react';
 import { removeAllPhone, buyNow, removePhone } from '../../action/action';
 import Spinner from '../../spinner/Spinner';
 
@@ -7,21 +7,14 @@ import plus from '../../image/plus.png';
 import remove from '../../image/delete.png';
 import many2 from '../../image/many2.png';
 import phone from '../../image/phone.png';
-import phoneBlack from '../../image/phoneBlack.png';
 
-const Phone = ({ item, itemFirst, dispatch }) => {
+const Phone = memo(({ item, itemFirst, dispatch }) => {
   const itemRef = useRef();
-  const [phoneImg, setPhoneImg] = useState('');
   const [spinnerTrigger, setSpinnerTrigger] = useState(false);
-
-  function changeImg(name) {
-    setPhoneImg(name);
-  }
 
   function addPhone(item) {
     dispatch(buyNow(item));
   }
-
   function removePhoneItem(item) {
     dispatch(removePhone(item));
   }
@@ -54,20 +47,15 @@ const Phone = ({ item, itemFirst, dispatch }) => {
         setTimeout(() => dispatch(removeAllPhone(item[0])), 1000);
       });
   }
+
+  // console.log('render');
   return (
     <div tabIndex="0" ref={itemRef} key={itemFirst.id} className="item">
       <div className="item__wrapper_general">
-        <div
-          className="item__general"
-          onMouseOver={() => changeImg(itemFirst.name)}
-          onMouseOut={() => changeImg('not')}>
+        <div className="item__general">
           <img id="item__img" onClick={() => removePhoneItem(itemFirst)} src={minus} alt="minus" />
           <strong>{item.length} </strong>
-          {phoneImg === itemFirst.name ? (
-            <img id="img" src={phone} alt={item.name} />
-          ) : (
-            <img id="img" src={phoneBlack} alt={item.name} />
-          )}
+          <img id="img" src={phone} alt={item.name} />
           <img id="item__img" onClick={() => addPhone(itemFirst)} src={plus} alt="plus" />
         </div>
         <h2>{itemFirst.name}</h2>
@@ -86,6 +74,6 @@ const Phone = ({ item, itemFirst, dispatch }) => {
       {spinnerTrigger ? <Spinner /> : null}
     </div>
   );
-};
+});
 
 export default Phone;

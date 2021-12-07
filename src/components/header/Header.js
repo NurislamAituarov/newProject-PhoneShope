@@ -44,8 +44,13 @@ const Header = () => {
     }
     window.addEventListener('resize', resize);
 
+    const timerPopUp = setTimeout(() => {
+      dispatch(popUp(true));
+    }, 5000);
+
     return () => {
       window.removeEventListener('resize', resize);
+      clearTimeout(timerPopUp);
     };
   }, []);
 

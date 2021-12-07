@@ -6,37 +6,17 @@ import { useState, useEffect } from 'react';
 const SectionView = () => {
   let { itemsFilter, valueSearch } = useSelector((state) => state.reducer);
   const [download, setDownload] = useState(false);
-  // const controller = new AbortController();
 
   itemsFilter = itemsFilter.filter((item) => {
     return item.name.toLowerCase().includes(valueSearch.toLowerCase());
   });
 
-  // console.log('render');
   useEffect(() => {
-    // fetch('https://jsonplaceholder.typicode.com/todos/45', {
-    //   signal: controller.signal,
-    // })
-    //   .then((data) => {
-    //     clearTimeout(timeOut);
-    //     return data.json();
-    //   })
-    //   .then((data) => console.log(data));
-
-    // const timeOut = setTimeout(() => {
-    //   controller.abort();
-    //   console.log('отмена');
-    // }, 1000);
-
     setTimeout(() => {
       setDownload(true);
     }, 500);
   }, []);
 
-  function onAbort() {
-    // controller.abort();
-    console.log('отмена запроса');
-  }
   return (
     <section className="main_section_phone">
       {download
@@ -72,9 +52,7 @@ const SectionView = () => {
               </ContentLoader>
             );
           })}
-      <button onClick={onAbort} className="btn_more">
-        Load more
-      </button>
+      <button className="btn_more">Load more</button>
     </section>
   );
 };
